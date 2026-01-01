@@ -1,0 +1,271 @@
+/* --- 1. GLOBAL SETTINGS & VARIABLES --- */
+:root {
+    /* Variables allow us to change the theme easily */
+    --bg-dark: #0a0a0a;
+    --bg-panel: #141414;
+    --gold: #c5a059;
+    --gold-hover: #e6c888;
+    --text-white: #ffffff;
+    --text-gray: #aaaaaa;
+}
+
+/* Resetting default browser margins/padding for consistent look */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't increase element width */
+}
+
+/* Native smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: 'Raleway', sans-serif; /* Body font */
+    line-height: 1.6;
+}
+
+/* Typography styles */
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif; /* Heading font */
+    font-weight: 700;
+}
+
+/* --- 2. NAVIGATION BAR (Sticky) --- */
+.navbar {
+    display: flex;             /* Use Flexbox to align items side-by-side */
+    justify-content: space-between; /* Push logo left, links right */
+    align-items: center;       /* Center vertically */
+    padding: 1.5rem 5%;
+    background: rgba(10, 10, 10, 0.95); /* Slight transparency */
+    position: sticky;          /* Stays at top when scrolling */
+    top: 0;
+    z-index: 1000;             /* Ensures Nav stays on top of everything */
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none; /* Remove bullet points */
+    gap: 30px;        /* Space between links */
+}
+
+.nav-links a {
+    color: var(--text-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: color 0.3s ease; /* Smooth color change */
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* --- 3. HERO SECTION (Parallax Effect) --- */
+.hero-section {
+    height: 90vh; /* Takes up 90% of viewport height */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Creates the Parallax scroll effect */
+    
+    /* Centering the text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: fadeUp 1s ease-out; /* Trigger animation */
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+    animation: fadeUp 1s ease-out 0.3s backwards; /* 0.3s delay */
+}
+
+/* --- 4. BUTTONS --- */
+.btn-main {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--gold);
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn-main:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-3px); /* Lifts button up slightly */
+}
+
+.full-width {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* --- 5. GRID SYSTEM (Inventory) --- */
+.section-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 50px;
+}
+
+.car-grid {
+    display: grid;
+    /* This line creates a responsive grid automatically without media queries */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+/* --- 6. CAR CARDS --- */
+.car-card {
+    background: var(--bg-panel);
+    border: 1px solid #222;
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-10px); /* Lift card on hover */
+    border-color: var(--gold);
+}
+
+.img-wrapper {
+    overflow: hidden; /* Ensures image zoom stays inside the box */
+    height: 250px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers area without stretching */
+    transition: transform 0.5s ease;
+}
+
+.car-card:hover img {
+    transform: scale(1.1); /* Zoom effect */
+}
+
+.car-details {
+    padding: 20px;
+}
+
+.price {
+    color: var(--gold);
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.specs {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* --- 7. FORMS --- */
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--bg-panel);
+    padding: 40px;
+    border: 1px solid #333;
+}
+
+.contact-info {
+    text-align: center;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: var(--gold);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    border: 1px solid #333;
+    color: white;
+    font-family: inherit;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--gold); /* Gold border on click */
+}
+
+/* --- 8. FOOTER --- */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #000;
+    color: #555;
+    border-top: 1px solid #222;
+    margin-top: 100px;
+}
+
+/* --- 9. KEYFRAME ANIMATIONS --- */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- 10. MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack logo and links vertically */
+        gap: 15px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem; /* Smaller text on phones */
+    }
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxDrive | Luxury Redefined</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">LuxDrive</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#inventory">Collection</a></li>
+            <li><a href="#sell">Sell</a></li>
+            <li><a href="#contact">Concierge</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Refined Velocity</h1>
+            <p>Where engineering meets art. Discover your masterpiece.</p>
+            <a href="#inventory" class="btn-main">View Inventory</a>
+        </div>
+    </header>
+
+    <section id="inventory" class="section-container">
+        <h2 class="section-title">The Collection</h2>
+        
+        <div class="car-grid">
+            <article class="car-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80" alt="Porsche 911">
+                </div>
+                <div class="car-details">
+                    <h3>Porsche 911 Carrera</h3>
+                    <p class="price">₹1,80,00,000</p>
+                    <div class="specs">
+                        <span>2023</span>
+                        <span>Auto</span>
+                        <span>5,000 KM</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=600&q=80" alt="BMW M4">
+                </div>
+                <div class="car-details">
+                    <h3>BMW M4 Competition</h3>
+                    <p class="price">₹78,50,000</p>
+                    <div class="specs">
+                        <span>2022</span>
+                        <span>Auto</span>
+                        <span>12,000 KM</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=600&q=80" alt="Ferrari F8">
+                </div>
+                <div class="car-details">
+                    <h3>Ferrari F8 Tributo</h3>
+                    <p class="price">₹2,50,00,000</p>
+                    <div class="specs">
+                        <span>2023</span>
+                        <span>Manual</span>
+                        <span>7,000 KM</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card">
+                <div class="img-wrapper">
+                    <img src="am.jpg" alt="Aston Martin">
+                </div>
+                <div class="car-details">
+                    <h3>Aston Martin Vantage</h3>
+                    <p class="price">₹1,44,00,000</p>
+                    <div class="specs">
+                        <span>2024</span>
+                        <span>Manual</span>
+                        <span>2,800 KM</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card">
+                <div class="img-wrapper">
+                    <img src="rr.jpg" alt="Rolls Royce">
+                </div>
+                <div class="car-details">
+                    <h3>Rolls Royce Phantom</h3>
+                    <p class="price">₹9,00,00,000</p>
+                    <div class="specs">
+                        <span>2025</span>
+                        <span>Auto</span>
+                        <span>1,400 KM</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="car-card">
+                <div class="img-wrapper">
+                    <img src="land-rover-defender-130-outbound-review.jpg" alt="Land Rover Defender">
+                </div>
+                <div class="car-details">
+                    <h3>Land Rover Defender</h3>
+                    <p class="price">₹90,00,000</p>
+                    <div class="specs">
+                        <span>2024</span>
+                        <span>Manual</span>
+                        <span>9,030 KM</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="sell" class="section-container">
+        <h2 class="section-title">Sell Your Car</h2>
+        <div class="form-wrapper">
+            <form>
+                <div class="input-group">
+                    <label>Car Details</label>
+                    <input type="text" placeholder="e.g. 2021 Audi RS7, 15000km" required>
+                </div>
+                <div class="input-group">
+                    <label>Expected Price (₹)</label>
+                    <input type="number" placeholder="Enter amount" required>
+                </div>
+                <button type="submit" class="btn-main full-width">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact" class="section-container">
+        <h2 class="section-title">Concierge Service</h2>
+        <div class="form-wrapper">
+            <p class="contact-info">123 Luxury Lane, Auto City • +91 98765 43210</p>
+            <form>
+                <div class="input-group">
+                    <label>Your Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="input-group">
+                    <label>Message</label>
+                    <textarea rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-main full-width">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 LuxDrive Dealership. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
